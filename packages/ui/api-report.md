@@ -294,6 +294,8 @@ export interface TLUiButtonProps extends React_3.HTMLAttributes<HTMLButtonElemen
     // (undocumented)
     loading?: boolean;
     // (undocumented)
+    showIconTitle?: boolean;
+    // (undocumented)
     smallIcon?: boolean;
     // (undocumented)
     spinner?: boolean;

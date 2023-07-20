@@ -20,6 +20,7 @@ export const RedoButton = memo(function RedoButton() {
 			disabled={!canRedo}
 			onClick={() => redo.onSelect('quick-actions')}
 			smallIcon
+			showIconTitle={true}
 		/>
 	)
 })

@@ -20,6 +20,7 @@ export const DuplicateButton = track(function DuplicateButton() {
 			disabled={noSelected}
 			title={`${msg(action.label!)} ${kbdStr(action.kbd!)}`}
 			smallIcon
+			showIconTitle={true}
 		/>
 	)
 })

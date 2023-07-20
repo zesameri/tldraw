@@ -20,6 +20,7 @@ export interface TLUiButtonProps extends React.HTMLAttributes<HTMLButtonElement>
 	isChecked?: boolean
 	invertIcon?: boolean
 	type?: 'primary' | 'danger' | 'normal'
+	showIconTitle?: boolean
 }
 
 /** @public */
@@ -35,6 +36,7 @@ export const Button = React.forwardRef<HTMLButtonElement, TLUiButtonProps>(funct
 		type = 'normal',
 		children,
 		spinner,
+		showIconTitle = false,
 		...props
 	},
 	ref
@@ -61,7 +63,10 @@ export const Button = React.forwardRef<HTMLButtonElement, TLUiButtonProps>(funct
 			)}
 			{kbd && <Kbd>{kbd}</Kbd>}
 			{icon && !spinner && (
-				<Icon icon={icon} small={!!label || smallIcon} invertIcon={invertIcon} />
+				<div className="tlui-button__wrapper">
+					<Icon icon={icon} small={!!label || smallIcon} invertIcon={invertIcon} />
+					{showIconTitle && <span>{icon}</span>}
+				</div>
 			)}
 			{spinner && <Spinner />}
 		</button>

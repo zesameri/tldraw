@@ -25,6 +25,7 @@ export const TrashButton = track(function TrashButton() {
 			disabled={noSelected}
 			title={`${msg(action.label!)} ${kbdStr(action.kbd!)}`}
 			smallIcon
+			showIconTitle={true}
 		/>
 	)
 })

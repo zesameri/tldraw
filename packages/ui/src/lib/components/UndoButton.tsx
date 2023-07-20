@@ -20,6 +20,7 @@ export const UndoButton = memo(function UndoButton() {
 			disabled={!canUndo}
 			onClick={() => undo.onSelect('quick-actions')}
 			smallIcon
+			showIconTitle={true}
 		/>
 	)
 })
